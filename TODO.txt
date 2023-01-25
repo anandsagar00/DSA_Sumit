@@ -1,2 +1,3 @@
 1. Make a solution for improved version of prime in range question.
 2. Fibonacci log(n) method , using matrix exponentiation method.
+3. Rotate number was a good question 
