@@ -29,11 +29,14 @@ int main()
     for(int i=2;i*i<=n;i++)
     {
         if(n%i==0)
-        count++;
+        {
+            count++;
+            break; // when the first number also divided then it is not prime
+        }
     }
 
     if(count==0 && n!=1)
-    cout<<"Prime\n";
+    cout<<"Prime\n"; 
     else
     cout<<"Not-Prime\n";
 
