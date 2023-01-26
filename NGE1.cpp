@@ -19,59 +19,58 @@ Next greater for 8 is -1
 Next greater for 7 is -1
 */
 
-// Sol : https://youtu.be/rSf9vPtKcmI?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
+//Sol : https://youtu.be/XP8iEi9Aa8c?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
 
-// This approach is from Right to Left
+// This approach is from Left to Right
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <iterator>
-#include <algorithm>
-#include <stack>
-#include <queue>
-#include <deque>
-#include <utility>
-#include <unordered_map>
-#include <set>
-#include <map>
-#include <unordered_set>
-#include <string>
-#include <limits.h>
+#include<iostream>
+#include<fstream>
+#include<vector>
+#include<iterator>
+#include<algorithm>
+#include<stack>
+#include<queue>
+#include<deque>
+#include<utility>
+#include<unordered_map>
+#include<set>
+#include<map>
+#include<unordered_set>
+#include<string>
+#include<limits.h>
 using namespace std;
 #define ll long long int
-const int mod = 1e9 + 7;
+const int mod=1e9+7;
 
 int main()
 {
     int n;
-    cin >> n;
-    vector<int> arr(n, 0);
-    vector<int> v;
-    for (int i = 0; i < n; i++)
-        cin >> arr[i];
+    cin>>n;
+    vector<int> arr(n,0);
+    vector<int> v(n,-1);
+    for(int i=0;i<n;i++)
+    cin>>arr[i];
 
     stack<int> st; // stack which will store indices of elements
 
-    for (int i = n - 1; i >= 0; i--)
+    for(int i=0;i<n;i++)
     {
-        if (st.empty())
+        if(st.empty())
         {
             st.push(i);
-            v.push_back(-1);
         }
         else
         {
-            while (!st.empty() && arr[i] > arr[st.top()])
-                st.pop();
-            if (!st.empty())
-                v.push_back(arr[st.top()]);
-            else
-                v.push_back(-1);
+            //pop already existing elements in stack ,which are smaller than current element
+            // and become their answer i.e N.G.E
+                while(!st.empty() && arr[i]>arr[st.top()])
+                {
+                    v[st.top()]=arr[i];
+                    st.pop();
+                }
             st.push(i);
         }
     }
-    reverse(v.begin(), v.end());
-    for (auto &it : v)
-        cout << it << " ";
+    for(auto &it:v)
+    cout<<it<<" ";
 }
