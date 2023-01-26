@@ -2,3 +2,4 @@
 2. Fibonacci log(n) method , using matrix exponentiation method.
 3. Rotate number was a good question 
 4. Complete pattern 10 in this folder
+5. Pascal's triangle new formula
