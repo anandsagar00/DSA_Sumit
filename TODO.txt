@@ -8,4 +8,6 @@
 
 5. Pascal's triangle new formula
 
-6. Sliding window Maximum
+6. Sliding window Maximum [MUST]
+
+7. Infix Evaluation
