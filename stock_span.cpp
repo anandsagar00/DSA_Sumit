@@ -37,7 +37,7 @@ int main()
     cin>>n;
 
     vector<int> arr(n,0);
-    vector<int> NGE(n,-1);
+    vector<int> NGE(n,-1);//This vector store the indices of Previous Greater Element
 
     for(int i=0;i<n;i++)
     cin>>arr[i];
