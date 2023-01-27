@@ -129,23 +129,20 @@ int main()
             //DEBUG : cout<<"\n("<<ch<<","<<ch-'0'<<")"<<"\n";
             if (oprtr.empty() || ch == '(')
                 oprtr.push(ch);
-            else if (oprtr.top() != '(' && ch != ')' && getPriority(ch) <= getPriority(oprtr.top()))
+            else if (ch=='+'||ch=='-'||ch=='*'||ch=='/')
             {
-                
-                int op2 = operand.top();
-                operand.pop();
-                int op1 = operand.top();
-                operand.pop();
+                while (!oprtr.empty() && oprtr.top()!='(' && getPriority(ch)<=getPriority(oprtr.top()))
+                {
+                    int op2 = operand.top();
+                    operand.pop();
+                    int op1 = operand.top();
+                    operand.pop();
 
-                char op = oprtr.top();
-                oprtr.pop();
+                    char op = oprtr.top();
+                    oprtr.pop();
 
-                operand.push(solve(op1,op2,op));
-
-                oprtr.push(ch);
-            }
-            else if (ch != ')')
-            {
+                    operand.push(solve(op1,op2,op));
+                }
                 oprtr.push(ch);
             }
             else if (ch == ')')
