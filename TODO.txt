@@ -11,3 +11,5 @@
 6. Sliding window Maximum [MUST]
 
 7. Infix Evaluation
+
+8. ALL SORTS OF INFIX -> PREFIX , POSTFIX vice-versa and all evaluation
