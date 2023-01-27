@@ -64,18 +64,6 @@ bool isOperator(char op)
         return false;
 }
 
-template <typename T>
-void printStack(stack<T> s)
-{
-    //For Debugging
-    while (!s.empty())
-    {
-        cout<<s.top()<<",";
-        s.pop();
-    }
-    cout<<"\n";
-}
-
 int main()
 {
     string exp;
@@ -109,6 +97,10 @@ int main()
             }
             else if (ch != ')')
             {
+                /*
+                NOTE : This has to be notes because earlier I used to do it with if condition BUT...BUT...BUT
+                That was not meeting all the required condition.....The if wala wasn't working for a+b*c/d/e-f input
+                */
                 while (!oprtr.empty() && oprtr.top() != '(' && getPriority(ch) <= getPriority(oprtr.top()))
                 {
                     char op=oprtr.top();
