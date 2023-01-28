@@ -17,3 +17,5 @@
 9. TODO : Smallest Number following pattern , https://youtu.be/4_0l-QydwzI?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
 
 11. TODO : Minimum Stack 2 , i.e. in Constant space
+
+12. I've skipped the basics of Linked List .
