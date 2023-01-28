@@ -27,3 +27,5 @@
 16. Reverse Linked List Recursion (The code can be optimised , think)
 
 17. Video Number 194-203 of playlist : https://www.youtube.com/playlist?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
+
+18. Find intersection point of 2 linked lists (The linked list which will be intersected is of Y shape)
