@@ -21,3 +21,5 @@
 12. I've skipped the basics of Linked List .
 
 13. Merge Sort on Linked Lists
+
+14. K reverse a linked list.
