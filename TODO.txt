@@ -13,3 +13,5 @@
 7. Infix Evaluation
 
 8. ALL SORTS OF INFIX -> PREFIX , POSTFIX vice-versa and all evaluation
+
+9. TODO : Smallest Number following pattern , https://youtu.be/4_0l-QydwzI?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
