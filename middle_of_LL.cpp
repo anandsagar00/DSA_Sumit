@@ -1,5 +1,20 @@
 //Middle of a linked List , in single pass , w/o getting the size of the LL 
 
+/*
+Note :  There are two ways in which you define mid in case of list with even no. of elements
+
+way1 : 1->2->3->4
+       Middle Element = 2
+
+way2 : 1->2->3->4
+       Middle Element = 3
+
+I've done using way1 , in case of way1 initialise first ptr to head and 2nd to head->next
+in case of way2 initialise both to head 
+
+Way2 can be found in prev commit
+*/
+
 #include<iostream>
 using namespace std ;
 
@@ -67,7 +82,7 @@ int main()
     //using 2 pointer algorithm , move one pointer by one and another by 2
 
     Node *p=head;
-    Node *q=head;
+    Node *q=head->next;
 
     while(q!=NULL && q->next!=NULL)
     {
