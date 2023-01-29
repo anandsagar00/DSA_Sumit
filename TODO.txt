@@ -31,3 +31,5 @@
 18. Find intersection point of 2 linked lists (The linked list which will be intersected is of Y shape)
 
 19. Trees part has been skipped for now , as It would be difficult to make a tree everytime and show the output here in local computer
+
+20. Shell Rotate , spiral traversal
