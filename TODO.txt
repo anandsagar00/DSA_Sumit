@@ -29,3 +29,5 @@
 17. Video Number 194-203 of playlist : https://www.youtube.com/playlist?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
 
 18. Find intersection point of 2 linked lists (The linked list which will be intersected is of Y shape)
+
+19. Trees part has been skipped for now , as It would be difficult to make a tree everytime and show the output here in local computer
