@@ -1,6 +1,8 @@
 //Question : https://youtu.be/vk8sfizNtsY?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
 
-//Solution : 
+//Solution : https://youtu.be/iKSI_9NHR1M?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
+
+//NOTE : I have used a different approach than binary subsets generation 
 
 #include<iostream>
 #include<vector>
