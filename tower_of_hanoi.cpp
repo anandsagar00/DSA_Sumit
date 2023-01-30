@@ -23,11 +23,10 @@ using namespace std;
 void towerOfHanoi(int n,char A,char B,char C,int &count)
 {
     //Believe in faith
-    if(n==1)
+    if(n==0)
     {
-        //For 1 disc directly from A to B
-        count++;
-        cout<<"Move No. "<<count<<" : Move Disc "<<n<<" From "<<A<<" -> "<<B<<"\n";
+        //For 0 discs , return
+        return;
     }
     else
     {
