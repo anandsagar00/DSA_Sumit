@@ -9,6 +9,7 @@ using namespace std;
 
 int ways(int n,vector<int> &dp)
 {
+    //Number of ways to reach 0->N will be same as N->0
     if(n<0)
     return 0;
     else if(n==0)
