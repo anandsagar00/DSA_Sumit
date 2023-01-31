@@ -4,7 +4,7 @@
 
 //Solution : https://youtu.be/HGDmj5NrrjM?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
 
-//NOTE : Negative number may also be given in input
+//NOTE : Negative number may also be given in input (I have taken a bit further)
 
 #include<iostream>
 #include<vector>
