@@ -2,7 +2,7 @@
 
 //Explanation : https://www.pepcoding.com/resources/online-java-foundation/dynamic-programming-and-greedy/climb_stairs_with_variable_jumps/topic
 
-//The input in the array represents the number of jumps that we can take from that step
+//The input in the array represents the maximum number of jumps that we can take from that step
 #include<vector>
 #include<iostream>
 
