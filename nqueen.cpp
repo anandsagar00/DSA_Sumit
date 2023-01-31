@@ -68,17 +68,56 @@ bool isSafe(int **arr,int i,int j,int n)
     return left && up && ld && rd;
 }
 
-
+void placeQueens(int **arr,int i,int j,int n,vector<vector<int> > &ans,vector<int> temp)
+{
+    if(i==n)
+    {
+        //we have placed all queens succesfully
+        if(!temp.empty())
+        ans.push_back(temp);
+        return;
+    }
+    else if(i<0 || j<0 || i>=n || j>=n)
+    return ;
+    else
+    {
+        if(isSafe(arr,i,j,n))
+        {
+            arr[i][j]=1;
+            temp.push_back(i);
+            temp.push_back(j);
+            placeQueens(arr,i+1,0,n,ans,temp);
+            temp.pop_back();
+            temp.pop_back();
+            arr[i][j]=0;
+        }
+        placeQueens(arr,i,j+1,n,ans,temp);
+    }
+}
 
 int main()
 {
     int n;
     cin>>n;
-
     int **arr=new int*[n];
-
     for(int i=0;i<n;i++)
-    arr[i]=new int[n];
+    {
+        arr[i]=new int[n];
+    }
 
-    //TODO : 
+    vector<vector<int> > ans;
+    vector<int> temp;
+    placeQueens(arr,0,0,n,ans,temp);
+
+    for(auto &v:ans)
+    {
+        int l=v.size();
+        int i=0;
+        while(i<l)
+        {
+            cout<<v[i]<<"-"<<v[i+1]<<", ";
+            i+=2;
+        }
+        cout<<".\n";
+    }
 }
