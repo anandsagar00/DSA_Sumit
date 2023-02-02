@@ -5,7 +5,7 @@ using namespace std;
 
 int find_max(int arr[],int n)
 {
-    int ans=arr[0];
+    int ans=arr[0]; 
     for(int i=0;i<n;i++)
     ans=max(ans,arr[i]);
 
