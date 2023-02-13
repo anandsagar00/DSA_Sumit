@@ -3,4 +3,4 @@ This repository has the contents of the DSA-1 course taught by Sumeet Malik sir 
 
 Playlist link : https://youtube.com/playlist?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
 
-These has some of the most basic DSA questions to get started with
+This repo has some of the most basic DSA questions to get started with
