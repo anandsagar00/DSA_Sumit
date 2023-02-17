@@ -16,8 +16,23 @@
 using namespace std;
 const int mod=1e9+7;
 
+/*
+This question was asked in paypal interview , you are given a list of commonly used password and
+a list of passwords , now you have to classify the passwords as weak or strong , the conditions are : 
+
+Condition for a password to be weak is : 
+
+1. password is less than 6 characters
+2. password has all CAPITAL characters
+3. password has all small characters
+4. password has all digits
+5. any substring of password should not be in commonly used passwords
+
+*/
+
 vector<string> generateSubsets(string s)
 {
+    //This function generates subsets [Note : we are not using it anywhere]
     int n=s.length();
     long long int bit=1<<n;
 
@@ -103,7 +118,7 @@ vector<string> getPasswordStrength(vector<string> passwords,vector<string> commo
 
         for(auto &words:subsets)
         {
-            if(binary_search(common_words.begin(),common_words.end(),words))
+            if(words!="" && binary_search(common_words.begin(),common_words.end(),words))
             {
                 flag=true;
                 break;
@@ -123,7 +138,7 @@ int main()
 {
     vector<string> p,cw,ans;
     int n,m;
-    cin>>n>>m;
+    cin>>n;
 
     for(int i=0;i<n;i++)
     {
@@ -131,6 +146,7 @@ int main()
         cin>>s;
         p.push_back(s);
     }
+    cin>>m;
     for(int i=0;i<m;i++)
     {
         string s;

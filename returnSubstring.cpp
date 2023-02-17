@@ -18,6 +18,8 @@ using namespace std;
 const int mod=1e9+7;
 
 vector<string> getSubstrings(string s) {
+
+    //this function takes a string and returns all its substrings
     vector<string> substrings;
 
     for (int i = 0; i < s.length(); i++) {
