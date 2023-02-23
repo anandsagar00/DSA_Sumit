@@ -1,117 +1,129 @@
-//Write a C++ program to Traverse a matrix in spiral way
+// Write a C++ program to Traverse a matrix in spiral way
 
-//Question : https://youtu.be/UPEZBPh1UcU?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
+// Question : https://youtu.be/UPEZBPh1UcU?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
 
-//The solution below is one of the best and easiest explanation of all
+// The solution below is one of the best and easiest explanation of all
 
-//Solution : https://youtu.be/SVFXEqn3Ceo 
+// Solution : https://youtu.be/SVFXEqn3Ceo
 
-//Explanation : https://www.pepcoding.com/resources/online-java-foundation/2d-arrays/spiral_display/topic
+// Explanation : https://www.pepcoding.com/resources/online-java-foundation/2d-arrays/spiral_display/topic
 
-//Note : Box wala method , keep on printing elements box wise (refere sol video for context)
-//       this is also a 4 pointer method
+// Note : Box wala method , keep on printing elements box wise (refere sol video for context)
+//        this is also a 4 pointer method
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
-vector<vector<int> > input()
+vector<vector<int>> input()
 {
-    //takes input in a 2d vector and return a 2d vector
-    int r,c;
-    cin>>r>>c;
+    // takes input in a 2d vector and return a 2d vector
+    int r, c;
+    cin >> r >> c;
 
-    vector<vector<int> > arr(r,vector<int>(c,0));
+    vector<vector<int>> arr(r, vector<int>(c, 0));
 
-    for(int i=0;i<r;i++)
+    for (int i = 0; i < r; i++)
     {
-        for(int j=0;j<c;j++)
-        cin>>arr[i][j];
+        for (int j = 0; j < c; j++)
+            cin >> arr[i][j];
     }
     return arr;
 }
 
-void printMatrix(vector<vector<int> > &arr1)
+void printMatrix(vector<vector<int>> &arr1)
 {
-    int r1=arr1.size();
-    int c1=arr1[0].size();
+    int r1 = arr1.size();
+    int c1 = arr1[0].size();
 
-    for(int i=0;i<r1;i++)
+    for (int i = 0; i < r1; i++)
     {
-        for(int j=0;j<c1;j++)
-        cout<<arr1[i][j]<<" ";
-        cout<<"\n";
+        for (int j = 0; j < c1; j++)
+            cout << arr1[i][j] << " ";
+        cout << "\n";
     }
 }
 
-void spiral_traverse(vector<vector<int> > arr)
+void spiral_traverse(vector<vector<int>> arr)
 {
-    int r=arr.size();
-    int c=arr[0].size();
+    int r = arr.size();
+    int c = arr[0].size();
 
+    // these 4 var below will be used to define box
+    int minr = 0, minc = 0, maxr = r - 1, maxc = c - 1; // initialising min-row , min-col , max-row , max-col pointer
 
-    //these 4 var below will be used to define box
-    int minr=0,minc=0,maxr=r-1,maxc=c-1; //initialising min-row , min-col , max-row , max-col pointer
+    int total_elements = r * c;
+    int count = 0;
 
-    int total_elements=r*c;
-    int count=0;
+    cout << "\nSpiral traversal is : \n";
 
-    cout<<"\nSpiral traversal is : \n";
-
-    while(count<total_elements)//till the number of printed values are less than total elements
+    while (count < total_elements) // till the number of printed values are less than total elements
     {
-        //printing left wall 
+        // printing left wall
 
-        for(int i=minr;i<=maxr;i++)
+        for (int i = minr; i <= maxr; i++)
         {
-            //in left wall the rows are changing the col remains fixed as min col
-            cout<<arr[i][minc]<<" ";
+            // in left wall the rows are changing the col remains fixed as min col
+            cout << arr[i][minc] << " ";
             count++;
         }
 
-        //bottom wall
+        // There can be a chance that we have printed all elements and again elements will be printed
+        //  so , stop the moment you find total elements has been printed
 
-        for(int i=minc+1;i<=maxc;i++)
+        if (count == total_elements)
+            break;
+
+        // bottom wall
+
+        for (int i = minc + 1; i <= maxc; i++)
         {
-            //in bottom wall the cols are changing where as row remains fixed as maxr
-            cout<<arr[maxr][i]<<" ";
+            // in bottom wall the cols are changing where as row remains fixed as maxr
+            cout << arr[maxr][i] << " ";
             count++;
         }
 
-        //right wall
+        if (count == total_elements)
+            break;
 
-        for(int i=maxr-1;i>=minr;i--)
+        // right wall
+
+        for (int i = maxr - 1; i >= minr; i--)
         {
-            //in right wall the rows are changing where as cols remains fixed as maxc
-            cout<<arr[i][maxc]<<" ";
+            // in right wall the rows are changing where as cols remains fixed as maxc
+            cout << arr[i][maxc] << " ";
             count++;
         }
 
-        //top wall
-        for(int i=maxc-1;i>minc;i--)
+        if (count == total_elements)
+            break;
+
+        // top wall
+        for (int i = maxc - 1; i > minc; i--)
         {
-            //in top wall the row remains fixed as minr where as cols change
-            cout<<arr[minr][i]<<" ";
+            // in top wall the row remains fixed as minr where as cols change
+            cout << arr[minr][i] << " ";
             count++;
         }
+
+        if (count == total_elements)
+            break;
 
         minr++;
         maxr--;
         minc++;
         maxc--;
-
     }
 
-    
-    cout<<"\n";
+    cout << "\n";
 }
 
 int main()
 {
-    vector<vector<int> > arr1=input();
+    vector<vector<int>> arr1 = input();
 
-    cout<<"Original input : \n";
+    cout << "Original input : \n";
     printMatrix(arr1);
 
     spiral_traverse(arr1);
