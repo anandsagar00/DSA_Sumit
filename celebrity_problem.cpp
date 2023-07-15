@@ -16,7 +16,7 @@ Example:
 Consider a party of 4 people: with the array of strings as:
 
 0000
-1011
+1011 
 1101
 1110
 
