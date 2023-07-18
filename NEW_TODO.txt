@@ -1,0 +1,37 @@
+1. Make a solution for improved version of prime in range question.
+
+2. Fibonacci log(n) method , using matrix exponentiation method.
+
+3. Rotate number was a good question 
+
+4. Complete pattern 10 in this folder
+
+5. Pascal's triangle new formula
+
+6. Sliding window Maximum [MUST]
+
+7. Infix Evaluation
+
+8. ALL SORTS OF INFIX -> PREFIX , POSTFIX vice-versa and all evaluation
+
+9. TODO : Smallest Number following pattern , https://youtu.be/4_0l-QydwzI?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
+
+11. TODO : Minimum Stack 2 , i.e. in Constant space
+
+12. I've skipped the basics of Linked List .
+
+13. Merge Sort on Linked Lists
+
+14. K reverse a linked list.
+
+16. Reverse Linked List Recursion (The code can be optimised , think)
+
+17. Video Number 194-203 of playlist : https://www.youtube.com/playlist?list=PL-Jc9J83PIiFj7YSPl2ulcpwy-mwj1SSk
+
+18. Find intersection point of 2 linked lists (The linked list which will be intersected is of Y shape)
+
+19. Trees part has been skipped for now , as It would be difficult to make a tree everytime and show the output here in local computer
+
+20. Shell Rotate , spiral traversal
+
+21. Print Encodings
