@@ -3,8 +3,14 @@
 
 int anagram(char *str1,char *str2)
 {
-    int hash1[27]={0};
-    int hash2[27]={0};
+    int hash1[27];
+    int hash2[27];
+
+    for(int i=0;i<=26;i++)
+    {
+        hash1[i]=0;
+        hash2[i]=0;
+    }
 
     int n1=strlen(str1);
     int n2=strlen(str2);
