@@ -36,7 +36,7 @@ int countUniqueYear(char *str)
 int main()
 {
     char str[1000];
-    gets(str);
+    strcpy(str,"Hello my name is Anand Sagar and I will be graduating on 01-07-2024 my internship starts from 01-01-2024 and I had joined college on 01-01-2020");
 
     printf("%d",countUniqueYear(str));
 
